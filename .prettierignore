@@ -1,0 +1,6 @@
+.gitignore
+.prettierignore
+yarn.lock
+*.ttf
+*.woff
+*.woff2
