@@ -32,9 +32,8 @@ const Info = styled.div`
 
 const Label = styled.span`
   display: block;
-  font-size: 13px;
-  font-weight: bold;
-  color: #21243b;
+  font-size: 18px;
+  color: white;
   margin-bottom: 12px;
 `;
 

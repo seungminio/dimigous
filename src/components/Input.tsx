@@ -102,9 +102,10 @@ const Container = styled.div<{ error: boolean; focus: boolean }>`
   align-items: center;
   cursor: text;
   width: 100%;
-  padding: 17px 14px;
-  border: solid 1.5px rgba(33, 36, 59, 0.3);
-  border-radius: 10px;
+  /* padding: 17px 0; */
+  padding: 10px;
+  border: solid 1.5px rgba(255, 255, 255, 0.8);
+  border-radius: 3px;
   ${({ error }) =>
     error &&
     css`
@@ -121,11 +122,12 @@ const Container = styled.div<{ error: boolean; focus: boolean }>`
 const StyledInput = styled.input`
   width: 100%;
   border: 0;
-  font-size: 18px;
+  font-size: 16px;
   outline: 0;
-
+  background: none;
+  color: white;
   &::placeholder {
-    color: rgba(33, 36, 59, 0.3);
+    color: rgba(255, 255, 255, 0.8);
   }
 
   ${({ type }) => type === 'file' && `display: none;`}
@@ -133,7 +135,7 @@ const StyledInput = styled.input`
 
 const PlaceHolder = styled.label`
   width: 100%;
-  color: rgba(33, 36, 59, 0.3);
+  color: rgba(33, 36, 59, 0.8);
   cursor: pointer;
 `;
 
