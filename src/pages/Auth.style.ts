@@ -77,3 +77,7 @@ export const ProfileImage = styled.img`
 export const NotFoundImage = styled.img`
   width: 100%;
 `;
+
+export const LottieWrap = styled.div`
+  margin-bottom: 20px;
+`;
