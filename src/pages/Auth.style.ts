@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
 
 export const Info = styled.span`
   font-size: 20px;
@@ -35,7 +36,7 @@ export const Button = styled.button`
   margin-bottom: 20px;
 `;
 
-export const TextButton = styled.button`
+export const TextButton = styled(Link)`
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -46,6 +47,7 @@ export const TextButton = styled.button`
   font-size: 18px;
   margin-left: auto;
   outline: 0;
+  text-decoration: none;
   & > span {
     margin-right: 6px;
   }

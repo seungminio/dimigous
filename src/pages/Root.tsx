@@ -34,7 +34,7 @@ const Root: React.FC = () => {
         <InputWithLabel label="비밀번호" id="password" type="password" />
       </InputWrap>
       <Button>로그인</Button>
-      <TextButton>
+      <TextButton to="/global">
         <span>통합 계정으로 전환</span>
         <FiArrowRight />
       </TextButton>
