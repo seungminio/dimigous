@@ -73,3 +73,7 @@ export const ProfileImageWrap = styled.div`
 export const ProfileImage = styled.img`
   width: 100%;
 `;
+
+export const NotFoundImage = styled.img`
+  width: 100%;
+`;
