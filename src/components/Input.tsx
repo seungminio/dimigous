@@ -52,11 +52,7 @@ const Input = ({
   };
 
   return (
-    <Container
-      focus={isFocus}
-      error={error || false}
-      onClick={() => inputRef.current && inputRef.current.focus()}
-    >
+    <Container focus={isFocus} error={error || false}>
       <StyledInput
         id={`${inputType === 'file' && 'fileInput'}`}
         ref={inputRef}
@@ -103,7 +99,7 @@ const Container = styled.div<{ error: boolean; focus: boolean }>`
   cursor: text;
   width: 100%;
   /* padding: 17px 0; */
-  padding: 10px;
+  padding: 0 10px;
   border: solid 1.5px rgba(255, 255, 255, 0.8);
   border-radius: 3px;
   ${({ error }) =>
@@ -126,6 +122,7 @@ const StyledInput = styled.input`
   outline: 0;
   background: none;
   color: white;
+  padding: 10px 0;
   &::placeholder {
     color: rgba(255, 255, 255, 0.8);
   }

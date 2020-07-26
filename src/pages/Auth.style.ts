@@ -1,7 +1,16 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+`;
+
 export const Info = styled.span`
+  display: block;
+  width: fit-content;
   font-size: 20px;
   padding-bottom: 15px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
@@ -51,4 +60,16 @@ export const TextButton = styled(Link)`
   & > span {
     margin-right: 6px;
   }
+`;
+
+export const ProfileImageWrap = styled.div`
+  width: 200px;
+  height: 200px;
+  border-radius: 150px;
+  overflow: hidden;
+  margin: 0 auto 40px auto;
+`;
+
+export const ProfileImage = styled.img`
+  width: 100%;
 `;
