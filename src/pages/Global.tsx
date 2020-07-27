@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Lottie from 'react-lottie';
 import animationData from '../assets/convert_animation.json';
@@ -15,6 +15,7 @@ import {
 import InputWithLabel from '../components/InputWithLabel';
 
 import { api } from '../utils/api';
+import Input from '../components/Input';
 
 const Global = () => {
   const [loading, setLoading] = useState(false);
@@ -59,6 +60,10 @@ const Global = () => {
     animationData: animationData,
   };
 
+  useEffect(() => {
+    console.log(info);
+  }, [info]);
+
   return (
     <AuthServiceWrapper>
       {accountInfo ? (
@@ -89,15 +94,15 @@ const Global = () => {
           <Info>디미고 계정을 통합 계정으로 전환합니다.</Info>
           <Form onSubmit={handleLoginSubmit}>
             <InputWrap>
-              <InputWithLabel
-                label="아이디"
+              <Input
+                placeholder="아이디"
                 id="username"
                 type="text"
                 value={info.username}
                 onChange={handleChange}
               />
-              <InputWithLabel
-                label="비밀번호"
+              <Input
+                placeholder="비밀번호"
                 id="password"
                 type="password"
                 value={info.password}

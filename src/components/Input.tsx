@@ -99,9 +99,11 @@ const Container = styled.div<{ error: boolean; focus: boolean }>`
   cursor: text;
   width: 100%;
   /* padding: 17px 0; */
-  padding: 0 10px;
-  border: solid 1.5px rgba(255, 255, 255, 0.8);
+  padding: 0 19px;
+  border: solid 1.5px rgba(245, 245, 245);
   border-radius: 3px;
+  transition: border-color 0.1s linear;
+  background-color: rgba(245, 245, 245);
   ${({ error }) =>
     error &&
     css`
@@ -118,13 +120,13 @@ const Container = styled.div<{ error: boolean; focus: boolean }>`
 const StyledInput = styled.input`
   width: 100%;
   border: 0;
-  font-size: 16px;
+  font-size: 17px;
   outline: 0;
   background: none;
-  color: white;
-  padding: 10px 0;
+  padding: 19px 0;
   &::placeholder {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(33, 36, 59, 0.8);
+    font-weight: bold;
   }
 
   ${({ type }) => type === 'file' && `display: none;`}

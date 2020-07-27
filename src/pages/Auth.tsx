@@ -19,6 +19,7 @@ import useQueryString from '../utils/useQueryString';
 import { api } from '../utils/api';
 
 import animationData from '../assets/connect_animation.json';
+import Input from '../components/Input';
 
 const Auth: React.FC = () => {
   const [info, setInfo] = useState({ username: '', password: '' });
@@ -114,15 +115,15 @@ const Auth: React.FC = () => {
             통합 계정으로 <b>{name}</b> 서비스에 로그인합니다.
           </Info>
           <InputWrap>
-            <InputWithLabel
-              label="아이디"
+            <Input
+              placeholder="아이디"
               id="username"
               type="text"
               value={info.username}
               onChange={handleChange}
             />
-            <InputWithLabel
-              label="비밀번호"
+            <Input
+              placeholder="비밀번호"
               id="password"
               type="password"
               value={info.password}

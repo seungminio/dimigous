@@ -33,7 +33,6 @@ const Info = styled.div`
 const Label = styled.span`
   display: block;
   font-size: 18px;
-  color: white;
   margin-bottom: 12px;
 `;
 
