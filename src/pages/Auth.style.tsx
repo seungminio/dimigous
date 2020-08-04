@@ -13,7 +13,7 @@ export const Form = styled.form`
 const InfoContainer = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
   & > svg {
     margin-right: 6px;
   }

@@ -38,7 +38,7 @@ const Auth: React.FC = () => {
         setError(true);
         // alert(err.response.data.message);
       });
-  }, []);
+  }, [query.client_id]);
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -93,17 +93,25 @@ const Auth: React.FC = () => {
   };
 
   return (
-    <AuthServiceWrapper>
+    <AuthServiceWrapper
+      info={
+        error ? (
+          '서비스를 찾을 수 없습니다.'
+        ) : needConfirm ? (
+          <>
+            <b>{name}</b> 서비스에 연결 하시겠습니까?
+          </>
+        ) : (
+          <>
+            통합 계정으로 <b>{name}</b> 서비스에 로그인합니다.
+          </>
+        )
+      }
+    >
       {error ? (
-        <>
-          <Info>서비스를 찾을 수 없습니다.</Info>
-          <NotFoundImage src={require('../assets/404.svg')} />
-        </>
+        <NotFoundImage src={require('../assets/404.svg')} />
       ) : needConfirm ? (
         <Form onSubmit={handleConfirmSubmit}>
-          <Info>
-            <b>{name}</b> 서비스에 연결 하시겠습니까?
-          </Info>
           <LottieWrap>
             <Lottie options={defaultOptions} />
           </LottieWrap>
@@ -111,9 +119,6 @@ const Auth: React.FC = () => {
         </Form>
       ) : (
         <Form onSubmit={handleSubmit}>
-          <Info>
-            통합 계정으로 <b>{name}</b> 서비스에 로그인합니다.
-          </Info>
           <InputWrap>
             <Input
               placeholder="아이디"

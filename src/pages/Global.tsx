@@ -65,14 +65,25 @@ const Global = () => {
   }, [info]);
 
   return (
-    <AuthServiceWrapper>
+    <AuthServiceWrapper
+      info={
+        accountInfo ? (
+          loading ? (
+            '전환 중입니다. 잠시만 기다려주세요.'
+          ) : (
+            <> {accountInfo.name}님, 통합 계정으로 전환하시겠습니까?</>
+          )
+        ) : (
+          '디미고 계정을 통합 계정으로 전환합니다.'
+        )
+      }
+    >
       {accountInfo ? (
         <>
           <Form onSubmit={handleConvertSubmit}>
             {loading ? (
               <>
                 <Lottie options={defaultOptions} />
-                <Info>전환 중입니다. 잠시만 기다려주세요.</Info>
               </>
             ) : (
               <>
@@ -81,9 +92,6 @@ const Global = () => {
                     src={`https://api.dimigo.hs.kr/user_photo/${accountInfo.photo}`}
                   />
                 </ProfileImageWrap>
-                <Info>
-                  {accountInfo.name}님, 통합 계정으로 전환하시겠습니까?
-                </Info>
                 <Button type="submit">전환하기</Button>
               </>
             )}
@@ -91,7 +99,6 @@ const Global = () => {
         </>
       ) : (
         <>
-          <Info>디미고 계정을 통합 계정으로 전환합니다.</Info>
           <Form onSubmit={handleLoginSubmit}>
             <InputWrap>
               <Input
