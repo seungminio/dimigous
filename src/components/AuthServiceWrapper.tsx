@@ -10,7 +10,7 @@ const image = sample([
   'https://www.dimigo.hs.kr/files/attach/images/239/816/590/005/533d763804a3a0b33e71d0f4a789806e.jpg',
   'https://lh3.ggpht.com/p/AF1QipPudigOr7a3dj0HBC52GJCqgYvxXsUHTQem0R9C=s1024',
   'https://www.dimigo.hs.kr/layouts/minimal_dimigo/images/background.jpg',
-  'https://www.dimigo.hs.kr/layouts/minimal_dimigo/images/4.jpg',
+  // 'https://www.dimigo.hs.kr/layouts/minimal_dimigo/images/4.jpg',
 ]);
 
 const AuthServiceWrapper = ({
